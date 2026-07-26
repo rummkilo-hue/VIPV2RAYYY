@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">VIPV2RAY</string>
+    <string name="app_subtitle">កម្មវិធី V2Ray VPN ល្បឿនលឿន និងសុវត្ថិភាព</string>
+    
+    <!-- Navigation -->
+    <string name="nav_home">ទំព័រដើម</string>
+    <string name="nav_servers">ម៉ាស៊ីនបម្រើ</string>
+    <string name="nav_configs">ការកំណត់រចនាសម្ព័ន្ធ</string>
+    <string name="nav_stats">ស្ថិតិ</string>
+    <string name="nav_profile">គណនី</string>
+    <string name="nav_settings">ការកំណត់</string>
+    
+    <!-- Home Screen -->
+    <string name="status_connected">បានភ្ជាប់</string>
+    <string name="status_disconnected">មិនទាន់ភ្ជាប់</string>
+    <string name="status_connecting">កំពុងភ្ជាប់...</string>
+    <string name="status_disconnecting">កំពុងផ្តាច់...</string>
+    <string name="tap_to_connect">ចុចដើម្បីភ្ជាប់ VIPV2RAY</string>
+    <string name="tap_to_disconnect">ចុចដើម្បីផ្តាច់</string>
+    <string name="current_server">ម៉ាស៊ីនបម្រើបច្ចុប្បន្ន</string>
+    <string name="ping">ភីង (Ping)</string>
+    <string name="upload">បង្ហោះ (Upload)</string>
+    <string name="download">ទាញយក (Download)</string>
+    <string name="connection_time">រយៈពេលភ្ជាប់</string>
+    <string name="today_usage">ការប្រើប្រាស់ថ្ងៃនេះ</string>
+    <string name="subscription">ជាវ VIP</string>
+    <string name="network_quality">គុណភាពបណ្តាញ</string>
+    <string name="quality_excellent">ល្អឥតខ្ចោះ</string>
+    <string name="quality_good">ល្អ</string>
+    <string name="quality_fair">មធ្យម</string>
+    <string name="quick_connect">ភ្ជាប់រហ័ស</string>
+    <string name="favorite_server">ម៉ាស៊ីនបម្រើពេញចិត្ត</string>
+    
+    <!-- Servers Screen -->
+    <string name="search_servers">ស្វែងរកម៉ាស៊ីនបម្រើ ឬប្រទេស...</string>
+    <string name="filter_all">ទាំងអស់</string>
+    <string name="filter_fastest">លឿនបំផុត</string>
+    <string name="filter_recommended">បានណែនាំ</string>
+    <string name="filter_favorites">ពេញចិត្ត</string>
+    <string name="server_load">បន្ទុក:</string>
+    <string name="server_online">អនឡាញ</string>
+    <string name="server_busy">មមាញឹក</string>
+    <string name="server_maintenance">ថែទាំ</string>
+    
+    <!-- Config Manager -->
+    <string name="config_manager">គ្រប់គ្រង Config</string>
+    <string name="import_config">នាំចូល Config</string>
+    <string name="import_qr">ស្កេន QR Code</string>
+    <string name="import_url">នាំចូលតាម URL</string>
+    <string name="import_file">នាំចូលតាមឯកសារ</string>
+    <string name="paste_config">បិទភ្ជាប់ (Paste)</string>
+    <string name="batch_import">នាំចូលជាច្រើន</string>
+    <string name="export_config">នាំចេញ Config</string>
+    <string name="backup_restore">បម្រុងទុក / ស្តារឡើងវិញ</string>
+    <string name="search_configs">ស្វែងរកការកំណត់...</string>
+    <string name="active_config">Config កំពុងប្រើ</string>
+    
+    <!-- Auth Screen -->
+    <string name="login_title">ចូលប្រើប្រាស់ VIPV2RAY</string>
+    <string name="register_title">បង្កើតគណនីថ្មី</string>
+    <string name="email_label">អ៊ីមែល</string>
+    <string name="password_label">ពាក្យសម្ងាត់</string>
+    <string name="remember_login">ចងចាំការចូលប្រើ</string>
+    <string name="forgot_password">ភ្លេចពាក្យសម្ងាត់?</string>
+    <string name="login_button">ចូលប្រើ</string>
+    <string name="register_button">ចុះឈ្មោះ</string>
+    <string name="no_account">មិនទាន់មានគណនី? ចុះឈ្មោះ</string>
+    <string name="has_account">មានគណនីរួចហើយ? ចូលប្រើ</string>
+    <string name="biometric_login">ចូលប្រើដោយស្នាមម្រាមដៃ</string>
+    
+    <!-- Stats Screen -->
+    <string name="traffic_statistics">ស្ថិតិនៃការប្រើប្រាស់</string>
+    <string name="daily">ប្រចាំថ្ងៃ</string>
+    <string name="weekly">ប្រចាំសប្តាហ៍</string>
+    <string name="monthly">ប្រចាំខែ</string>
+    <string name="live_speed">ក្រាហ្វល្បឿនផ្ទាល់</string>
+    <string name="connection_history">ប្រវត្តិភ្ជាប់</string>
+    <string name="avg_ping">ភីងមធ្យម</string>
+    <string name="avg_speed">ល្បឿនមធ្យម</string>
+    
+    <!-- Settings -->
+    <string name="settings">ការកំណត់</string>
+    <string name="language">ភាសា</string>
+    <string name="theme">រូបរាង (Theme)</string>
+    <string name="proxy_mode">របៀប Proxy</string>
+    <string name="dns_settings">ការកំណត់ DNS</string>
+    <string name="mtu_size">ទំហំ MTU</string>
+    <string name="security">សុវត្ថិភាព</string>
+    <string name="pin_lock">សោលេខកូដ PIN</string>
+    <string name="root_detection">ពិនិត្យមើល Root</string>
+    <string name="screenshot_protection">ការពារការថតអេក្រង់</string>
+    <string name="notifications">ការជូនដំណឹង</string>
+    <string name="about">អំពីកម្មវិធី</string>
+    <string name="privacy_policy">គោលការណ៍ឯកជនភាព</string>
+    
+    <!-- Profile -->
+    <string name="user_profile">ប្រវត្តិរូប</string>
+    <string name="vip_subscription">កញ្ចប់ VIP</string>
+    <string name="referral_program">កម្មវិធីណែនាំមិត្តភក្តិ</string>
+    <string name="support_telegram">ជំនួយផ្ទាល់ (Telegram)</string>
+    <string name="logout">ចាកចេញ</string>
+</resources>

@@ -1,0 +1,6 @@
+{
+  "name": "VIPV2RAY",
+  "description": "Premium V2Ray VPN Client with AMOLED Dark Theme, VLESS/VMess/Trojan/Hysteria2 support, Multilingual Khmer & English, Biometrics and Real-time Traffic Statistics.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
