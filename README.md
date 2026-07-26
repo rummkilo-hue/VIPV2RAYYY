@@ -65,7 +65,8 @@ git clone https://github.com/your-org/vipv2ray.git
 cd vipv2ray
 
 # Build Debug APK using Gradle
-./gradlew assembleDebug
+gradle assembleDebug
+# (Or if using Gradle Wrapper in local environment: ./gradlew assembleDebug)
 ```
 
 ### 2. Backend & Docker Deployment

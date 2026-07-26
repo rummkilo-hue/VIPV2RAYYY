@@ -10,16 +10,21 @@ val NavSelectedPill = Color(0xFF3E3658)
 val GlassSurface = Color(0x2A1A182E)
 val GlassBorder = Color(0xFF5A4E7A)
 
-// Khmer Angkor Gold & Royal Palette
-val AngkorGold = Color(0xFFFFD700)              // Royal Gold Primary Accent
+// Khmer Angkor Gold & Royal Blue Palette
+val AngkorGold = Color(0xFFFFD700)              // Royal Gold Primary Accent (#FFD700)
 val AngkorGoldLight = Color(0xFFFFE87C)         // Soft Golden Glow
-val AngkorGoldDark = Color(0xFFB8860B)          // Dark Golden Bronze
+val AngkorGoldDark = Color(0xFFC59B27)          // Rich Imperial Gold Bronze
+val AngkorRoyalBlue = Color(0xFF1D3557)         // Royal Kingdom Blue Container
+val AngkorRoyalBlueDark = Color(0xFF0B131F)     // Deep Angkor Night Sky Background
+val AngkorRoyalBlueSurface = Color(0xFF142030)  // Royal Temple Blue Surface
+val AngkorRoyalBlueVariant = Color(0xFF1F2E45)  // Royal Blue Surface Variant
 val AngkorSandstone = Color(0xFFC8A261)         // Sandstone Carving Hue
 val AngkorTerracotta = Color(0xFF8B4513)        // Terracotta Temple Earth
-val AngkorIndigoNight = Color(0xFF0F0E17)       // Deep Twilight Temple Sky
-val AngkorTempleSurface = Color(0xFF1B1828)     // Dark Temple Surface
 val AngkorEmerald = Color(0xFF104A36)           // Angkor Jungle Emerald
 val AngkorLotusPink = Color(0xFFE05286)         // Sacred Lotus Accent
+
+val AngkorIndigoNight = Color(0xFF0B131F)       // Deep Royal Blue Twilight
+val AngkorTempleSurface = Color(0xFF142030)     // Royal Temple Surface
 
 val NeonCyan = Color(0xFFFFD700)               // Angkor Gold Primary
 val CyanGradientEnd = Color(0xFFFFE87C)        // Golden Light Accent

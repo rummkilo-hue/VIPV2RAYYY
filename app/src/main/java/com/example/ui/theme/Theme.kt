@@ -6,23 +6,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.graphics.Color
 import com.example.domain.model.AppTheme
 
-private val KhmerAngkorColorScheme = darkColorScheme(
-    primary = AngkorGold,
-    onPrimary = Color(0xFF2A1F00),
-    primaryContainer = AngkorTerracotta,
-    onPrimaryContainer = AngkorGoldLight,
-    secondary = AngkorSandstone,
-    onSecondary = Color(0xFF231C10),
-    tertiary = AngkorLotusPink,
-    background = AngkorIndigoNight,
-    onBackground = TextPrimary,
-    surface = AngkorTempleSurface,
-    onSurface = TextPrimary,
-    surfaceVariant = DarkSurfaceVariant,
-    onSurfaceVariant = TextSecondary,
-    outline = GlassBorder,
-    error = StatusRed
-)
+private val KhmerAngkorColorScheme = AngkorWatColorScheme
 
 private val AmoledDarkColorScheme = darkColorScheme(
     primary = Color(0xFFD0BCFF),
