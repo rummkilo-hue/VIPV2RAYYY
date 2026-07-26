@@ -215,6 +215,12 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
         }
     }
 
+    fun updateTheme(theme: AppTheme) {
+        viewModelScope.launch {
+            userPreferences.saveTheme(theme)
+        }
+    }
+
     fun updateProxyMode(mode: ProxyMode) {
         viewModelScope.launch {
             userPreferences.saveProxyMode(mode)

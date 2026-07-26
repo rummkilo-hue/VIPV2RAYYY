@@ -50,8 +50,8 @@ fun VIPTopBar(
         verticalAlignment = Alignment.CenterVertically
     ) {
         Column {
-            Text("VIPV2RAY", color = NeonCyan, fontSize = 20.sp, fontWeight = FontWeight.SemiBold, letterSpacing = (-0.5).sp)
-            Text("PREMIUM ACCESS", color = TextSecondary, fontSize = 10.sp, fontWeight = FontWeight.Bold, letterSpacing = 1.5.sp)
+            Text("VIPV2RAY", color = MaterialTheme.colorScheme.primary, fontSize = 20.sp, fontWeight = FontWeight.SemiBold, letterSpacing = (-0.5).sp)
+            Text("PREMIUM ACCESS", color = MaterialTheme.colorScheme.onSurfaceVariant, fontSize = 10.sp, fontWeight = FontWeight.Bold, letterSpacing = 1.5.sp)
         }
 
         Row(
@@ -62,8 +62,8 @@ fun VIPTopBar(
             Box(
                 modifier = Modifier
                     .clip(CircleShape)
-                    .background(DarkSurface)
-                    .border(1.dp, GlassBorder, CircleShape)
+                    .background(MaterialTheme.colorScheme.surface)
+                    .border(1.dp, MaterialTheme.colorScheme.outline, CircleShape)
                     .clickable(onClick = onLanguageToggle)
                     .padding(horizontal = 12.dp, vertical = 8.dp)
                     .testTag("topbar_language_toggle"),
@@ -71,7 +71,7 @@ fun VIPTopBar(
             ) {
                 Text(
                     text = if (currentLanguage == AppLanguage.KHMER) "🇰🇭 KM" else "🇬🇧 EN",
-                    color = TextPrimary,
+                    color = MaterialTheme.colorScheme.onSurface,
                     fontSize = 11.sp,
                     fontWeight = FontWeight.Bold
                 )
@@ -83,14 +83,14 @@ fun VIPTopBar(
                 modifier = Modifier
                     .size(40.dp)
                     .clip(CircleShape)
-                    .background(DarkSurface)
-                    .border(1.dp, GlassBorder, CircleShape)
+                    .background(MaterialTheme.colorScheme.surface)
+                    .border(1.dp, MaterialTheme.colorScheme.outline, CircleShape)
                     .testTag("topbar_settings")
             ) {
                 Icon(
                     imageVector = Icons.Default.Settings,
                     contentDescription = "Settings",
-                    tint = TextPrimary,
+                    tint = MaterialTheme.colorScheme.onSurface,
                     modifier = Modifier.size(20.dp)
                 )
             }
@@ -108,8 +108,8 @@ fun VIPBottomNavigation(
         modifier = modifier
             .fillMaxWidth()
             .windowInsetsPadding(WindowInsets.navigationBars)
-            .background(DarkSurface)
-            .border(width = 1.dp, color = GlassBorder)
+            .background(MaterialTheme.colorScheme.surface)
+            .border(width = 1.dp, color = MaterialTheme.colorScheme.outline)
             .padding(vertical = 6.dp, horizontal = 8.dp)
     ) {
         Row(
@@ -134,19 +134,19 @@ fun VIPBottomNavigation(
                             .width(64.dp)
                             .height(32.dp)
                             .clip(CircleShape)
-                            .background(if (isSelected) NavSelectedPill else Color.Transparent)
+                            .background(if (isSelected) MaterialTheme.colorScheme.primaryContainer else Color.Transparent)
                     ) {
                         Icon(
                             imageVector = icon,
                             contentDescription = stringResource(tab.stringRes),
-                            tint = if (isSelected) NeonCyan else TextSecondary.copy(alpha = 0.7f),
+                            tint = if (isSelected) MaterialTheme.colorScheme.primary else MaterialTheme.colorScheme.onSurfaceVariant.copy(alpha = 0.7f),
                             modifier = Modifier.size(22.dp)
                         )
                     }
                     Spacer(modifier = Modifier.height(2.dp))
                     Text(
                         text = stringResource(tab.stringRes),
-                        color = if (isSelected) NeonCyan else TextSecondary.copy(alpha = 0.7f),
+                        color = if (isSelected) MaterialTheme.colorScheme.primary else MaterialTheme.colorScheme.onSurfaceVariant.copy(alpha = 0.7f),
                         fontSize = 10.sp,
                         fontWeight = if (isSelected) FontWeight.Bold else FontWeight.Medium
                     )

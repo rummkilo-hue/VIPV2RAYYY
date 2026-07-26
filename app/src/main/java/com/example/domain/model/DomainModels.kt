@@ -61,7 +61,7 @@ enum class AppLanguage(val code: String, val displayName: String) {
 }
 
 enum class AppTheme {
-    AMOLED_DARK, GLASS_DARK, MIDNIGHT_BLUE
+    KHMER_ANGKOR, AMOLED_DARK, GLASS_DARK, MIDNIGHT_BLUE
 }
 
 enum class ProxyMode {
@@ -70,7 +70,7 @@ enum class ProxyMode {
 
 data class AppSettings(
     val language: AppLanguage = AppLanguage.KHMER,
-    val theme: AppTheme = AppTheme.AMOLED_DARK,
+    val theme: AppTheme = AppTheme.KHMER_ANGKOR,
     val proxyMode: ProxyMode = ProxyMode.GLOBAL,
     val dnsServer: String = "1.1.1.1 (Cloudflare Secure)",
     val mtuSize: Int = 1400,

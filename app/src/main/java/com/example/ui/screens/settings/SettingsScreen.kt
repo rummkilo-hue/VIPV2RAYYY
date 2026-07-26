@@ -24,6 +24,7 @@ import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.res.stringResource
@@ -33,6 +34,7 @@ import androidx.compose.ui.unit.sp
 import com.example.R
 import com.example.domain.model.AppLanguage
 import com.example.domain.model.AppSettings
+import com.example.domain.model.AppTheme
 import com.example.domain.model.ProxyMode
 import com.example.ui.theme.*
 import com.example.util.SecurityUtils
@@ -43,6 +45,7 @@ fun SettingsScreen(
     settings: AppSettings,
     onBackClick: () -> Unit,
     onLanguageToggle: () -> Unit,
+    onThemeChange: (AppTheme) -> Unit,
     onProxyModeChange: (ProxyMode) -> Unit,
     onDnsChange: (String) -> Unit,
     onMtuChange: (Int) -> Unit,
@@ -113,6 +116,44 @@ fun SettingsScreen(
                             shape = RoundedCornerShape(10.dp)
                         ) {
                             Text(if (settings.language == AppLanguage.KHMER) "🇬🇧 Switch EN" else "🇰🇭 ដូរជាភាសាខ្មែរ", color = TextPrimary, fontSize = 12.sp)
+                        }
+                    }
+
+                    HorizontalDivider(color = GlassBorder.copy(alpha = 0.3f))
+
+                    // App Theme Selector
+                    Column {
+                        Text("App Theme / ប្រធានបទ", color = TextPrimary, fontSize = 14.sp, fontWeight = FontWeight.SemiBold)
+                        Spacer(modifier = Modifier.height(10.dp))
+                        Row(
+                            modifier = Modifier.fillMaxWidth(),
+                            horizontalArrangement = Arrangement.spacedBy(6.dp)
+                        ) {
+                            AppTheme.values().forEach { theme ->
+                                val isSelected = settings.theme == theme
+                                val themeLabel = when (theme) {
+                                    AppTheme.KHMER_ANGKOR -> "🇰🇭 Angkor"
+                                    AppTheme.AMOLED_DARK -> "🌌 AMOLED"
+                                    AppTheme.GLASS_DARK -> "💎 Glass"
+                                    AppTheme.MIDNIGHT_BLUE -> "🔷 Blue"
+                                }
+                                Box(
+                                    modifier = Modifier
+                                        .weight(1f)
+                                        .clip(RoundedCornerShape(10.dp))
+                                        .background(if (isSelected) AngkorGold else DarkSurfaceVariant)
+                                        .clickable { onThemeChange(theme) }
+                                        .padding(vertical = 8.dp),
+                                    contentAlignment = Alignment.Center
+                                ) {
+                                    Text(
+                                        text = themeLabel,
+                                        color = if (isSelected) Color(0xFF2A1A0E) else TextSecondary,
+                                        fontSize = 10.sp,
+                                        fontWeight = FontWeight.Bold
+                                    )
+                                }
+                            }
                         }
                     }
 

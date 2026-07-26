@@ -94,6 +94,7 @@ fun NavGraph(
                     settings = settings,
                     onBackClick = { currentDestination = AppDestination.MAIN },
                     onLanguageToggle = { viewModel.toggleLanguage() },
+                    onThemeChange = { viewModel.updateTheme(it) },
                     onProxyModeChange = { viewModel.updateProxyMode(it) },
                     onDnsChange = { viewModel.updateDnsServer(it) },
                     onMtuChange = { viewModel.updateMtuSize(it) },

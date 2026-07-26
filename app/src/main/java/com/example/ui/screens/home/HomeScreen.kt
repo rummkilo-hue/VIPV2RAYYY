@@ -20,6 +20,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
@@ -54,6 +55,11 @@ fun HomeScreen(
             .verticalScroll(scrollState)
             .padding(horizontal = 16.dp, vertical = 8.dp)
     ) {
+        // Khmer Angkor Wat Heritage Banner
+        AngkorWatBannerCard()
+
+        Spacer(modifier = Modifier.height(16.dp))
+
         // Subscription Badge
         Row(
             modifier = Modifier
@@ -67,10 +73,10 @@ fun HomeScreen(
                 Box(
                     modifier = Modifier
                         .clip(RoundedCornerShape(8.dp))
-                        .background(StatusOrange.copy(alpha = 0.2f))
+                        .background(AngkorGold.copy(alpha = 0.2f))
                         .padding(horizontal = 8.dp, vertical = 4.dp)
                 ) {
-                    Text("VIP PRO", color = StatusOrange, fontSize = 11.sp, fontWeight = FontWeight.Bold)
+                    Text("VIP PRO", color = AngkorGold, fontSize = 11.sp, fontWeight = FontWeight.Bold)
                 }
                 Spacer(modifier = Modifier.width(10.dp))
                 Column {
@@ -98,13 +104,13 @@ fun HomeScreen(
 
         Spacer(modifier = Modifier.height(24.dp))
 
-        // Selected Server Selector Card (Elegant Dark Lavender Card)
+        // Selected Server Selector Card (Khmer Angkor Gold Card)
         currentServer?.let { server ->
             Box(
                 modifier = Modifier
                     .fillMaxWidth()
                     .clip(RoundedCornerShape(24.dp))
-                    .background(NeonCyan)
+                    .background(AngkorGold)
                     .clickable(onClick = onSelectServerClick)
                     .padding(18.dp)
                     .testTag("home_current_server_card")
@@ -123,7 +129,7 @@ fun HomeScreen(
                             modifier = Modifier
                                 .size(44.dp)
                                 .clip(CircleShape)
-                                .background(ElectricPurple)
+                                .background(Color(0xFF2A1A0E))
                         ) {
                             Text(text = server.flagEmoji, fontSize = 22.sp)
                         }
@@ -131,7 +137,7 @@ fun HomeScreen(
                         Column {
                             Text(
                                 text = "SELECTED SERVER",
-                                color = ElectricPurple.copy(alpha = 0.8f),
+                                color = Color(0xFF2A1A0E).copy(alpha = 0.8f),
                                 fontSize = 10.sp,
                                 fontWeight = FontWeight.Bold,
                                 letterSpacing = 1.sp
@@ -139,13 +145,13 @@ fun HomeScreen(
                             Spacer(modifier = Modifier.height(2.dp))
                             Text(
                                 text = server.serverName,
-                                color = ElectricPurple,
+                                color = Color(0xFF2A1A0E),
                                 fontSize = 17.sp,
                                 fontWeight = FontWeight.Bold
                             )
                             Text(
                                 text = "${server.protocol} • ${server.city.ifEmpty { server.countryName }}",
-                                color = ElectricPurple.copy(alpha = 0.9f),
+                                color = Color(0xFF2A1A0E).copy(alpha = 0.9f),
                                 fontSize = 12.sp,
                                 fontWeight = FontWeight.Medium
                             )
@@ -156,12 +162,12 @@ fun HomeScreen(
                         Box(
                             modifier = Modifier
                                 .clip(CircleShape)
-                                .background(ElectricPurple.copy(alpha = 0.15f))
+                                .background(Color(0xFF2A1A0E).copy(alpha = 0.15f))
                                 .padding(horizontal = 10.dp, vertical = 4.dp)
                         ) {
                             Text(
                                 text = "${currentPingMs}ms",
-                                color = ElectricPurple,
+                                color = Color(0xFF2A1A0E),
                                 fontSize = 12.sp,
                                 fontWeight = FontWeight.Bold
                             )
@@ -170,7 +176,7 @@ fun HomeScreen(
                         Icon(
                             imageVector = Icons.Default.ChevronRight,
                             contentDescription = "Switch Server",
-                            tint = ElectricPurple,
+                            tint = Color(0xFF2A1A0E),
                             modifier = Modifier.size(24.dp)
                         )
                     }
